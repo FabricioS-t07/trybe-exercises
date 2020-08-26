@@ -1,0 +1,33 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.caixaNav{
+    background-color:#330000;
+}
+.caixaNav a{
+    color: #ffffff;
+    padding:5px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.caixaMain{
+}
+.artigos{
+    width: 60%;
+}
+.asideC{
+    position: absolute;
+    left: 66%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    
+}
+img{
+    height: 150px;
+}
+.tableStyle{
+    
+    width: 30%;
+}
