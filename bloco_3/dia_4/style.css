@@ -30,3 +30,14 @@ img{
 .tableStyle{
     width: 30%;
 }
+.tableBottom{
+    margin:2px 2px;
+    padding: 2px 2px;
+    background: #ffecc3;
+}
+footer{
+    text-align: right;
+    background-color: #330000;
+    color:#ffffff;
+    padding: 3px 8px;
+}
