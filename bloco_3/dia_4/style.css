@@ -1,6 +1,11 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+header{
+    text-align: center;
+    padding:3px;
+    background-color: #ffecc3;
+}
 .caixaNav{
     background-color:#330000;
 }
@@ -10,19 +15,14 @@
     display: inline-block;
     text-decoration: none;
 }
-
-.caixaMain{
-}
 .artigos{
     width: 60%;
 }
 .asideC{
     position: absolute;
     left: 66%;
-    display: inline-block;
     vertical-align: top;
-    padding: 0 10px;
-    
+    padding: 0 10px;  
 }
 img{
     height: 150px;
