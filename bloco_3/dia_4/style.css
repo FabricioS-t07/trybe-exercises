@@ -1,0 +1,43 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    text-align: center;
+    padding:3px;
+    background-color: #ffecc3;
+}
+.caixaNav{
+    background-color:#330000;
+}
+.caixaNav a{
+    color: #ffffff;
+    padding:5px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+.artigos{
+    width: 60%;
+}
+.asideC{
+    position: absolute;
+    left: 66%;
+    vertical-align: top;
+    padding: 0 10px;  
+}
+img{
+    height: 150px;
+}
+.tableStyle{
+    width: 30%;
+}
+.tableBottom{
+    margin:2px 2px;
+    padding: 2px 2px;
+    background: #ffecc3;
+}
+footer{
+    text-align: right;
+    background-color: #330000;
+    color:#ffffff;
+    padding: 3px 8px;
+}
