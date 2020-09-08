@@ -19,7 +19,7 @@ document.getElementsByClassName('center-content')[0].style.background =
 //exercício 3
 document.getElementsByClassName('main-content')[0].style.background =
 	'rgb( 255 , 255 , 255 )';
-// backgroundBack.style.background = "white";
+
 //exercício 4
 
 document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - Javascript';
@@ -30,4 +30,11 @@ for (i = 0; i < document.getElementsByTagName('p').length; i += 1) {
 	document.getElementsByTagName('p')[i].innerText = document
 		.getElementsByTagName('p')
 		[i].innerText.toUpperCase();
+}
+// exercicio 6
+for (i = 0; i < document.getElementsByTagName('p').length; i += 1) {
+	console.log(document.getElementsByTagName('p')[i].innerText);
+
+	document.querySelectorAll('.column_left div').style.background =
+		'rgb( 241 , 131 , 235 )';
 }
