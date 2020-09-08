@@ -60,15 +60,20 @@
 			// Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
 			let tagH1 = document.createElement('h1');
 			tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-      document.body.appendChild(tagH1);
-      // Adicione a tag div com a classe main-content como filho da tag body;
-      let tagDiv = document.createElement('div');
-      document.getElementsByTagName('div')[0].className = 'main-content';
-      document.body.appendChild(tagDiv);
-      //Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
-      // let tagDiv = document.createElement('div');
-      // document.getElementsByTagName('div')[0].className = 'main-content';
-      // document.body.first.appendChild(tagDiv);
+			document.body.appendChild(tagH1);
+			// Adicione a tag div com a classe main-content como filho da tag body;
+			let tagDivPai = document.createElement('div');
+			document.body.appendChild(tagDivPai);
+			document.getElementsByTagName('div')[0].className = 'main-content';
+			//Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+			let divFilha = document.createElement('div');
+			document.getElementsByTagName('div')[0].appendChild(divFilha);
+			document.getElementsByTagName('div')[1].className = 'center-content';
+			// Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+			let pFilhaDiv = document.createElement('div');
+			document.getElementsByTagName('div')[1].appendChild(pFilhaDiv);
+			document.getElementsByTagName('div')[2].innerText = 'um texto aqui';
+			//Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 		</script>
 	</body>
 </html>
