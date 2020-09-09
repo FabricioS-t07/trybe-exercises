@@ -57,31 +57,59 @@
 	</head>
 	<body>
 		<script>
-			// Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+			// 1 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
 			const tagH1 = document.createElement('h1');
 			tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
 			document.body.appendChild(tagH1);
 
-			// Adicione a tag div com a classe main-content como filho da tag body;
+			// 2 Adicione a tag div com a classe main-content como filho da tag body;
 			const tagDivPai = document.createElement('div');
 			document.body.appendChild(tagDivPai);
-			document.getElementsByTagName('div')[0].className = 'main-content';
+			document.body.childNodes[3].className = 'main-content';
 
-			//Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
-			let divFilha = document.createElement('div');
+			// 3 Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+			const divFilha = document.createElement('div');
 			document.querySelectorAll('div')[0].appendChild(divFilha);
-			document.getElementsByTagName('div')[1].className = 'center-content';
+			document.querySelectorAll('div')[1].className = 'center-content';
 
-			// Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
-			let pFilhaDiv = document.createElement('div');
+			// 4 Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+			const pFilhaDiv = document.createElement('div');
 			document.querySelectorAll('div')[1].appendChild(pFilhaDiv);
 			document.getElementsByTagName('div')[2].innerText = 'um texto aqui';
 
-			//Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
-			let divFilha2 = document.createElement('div');
+			// 5 Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+			const divFilha2 = document.createElement('div');
 			document.querySelectorAll('div')[0].appendChild(divFilha2);
-			// document.getElementsByTagName('div')[0].className = 'left-content';
+			document.querySelectorAll('div')[3].className = 'left-content';
 
+			// 6 Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+			const divFilha3 = document.createElement('div');
+			document.querySelectorAll('div')[0].appendChild(divFilha3);
+			document.querySelectorAll('div')[4].className = 'right-content';
+
+			// 7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+			const imagem = document.createElement('img');
+			document.querySelectorAll('div')[0].appendChild(imagem);
+			document.querySelector('img').src = 'https://picsum.photos/200';
+			document.querySelector('img').className = 'small-image';
+
+			// 8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+			let listaUl = document.createElement('ul');
+			document.querySelectorAll('div')[4].appendChild(listaUl);
+			for (let i = 1; i <= 10; i += 1) {
+				let itemLista = document.createElement('li');
+				itemLista.innerText = i;
+				document.querySelectorAll('ul')[0].appendChild(itemLista);
+			}
+			// Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+			for (let i = 0; i < 3; i += 1) {
+				let h3FilhaTagDivPai = document.createElement('h3');
+				document.body.childNodes[3].appendChild(h3FilhaTagDivPai);
+			}
+			// Adicione a classe title na tag h1 criada;
+			document.body.childNodes[2].className = 'title';
+
+			//
 		</script>
 	</body>
 </html>
