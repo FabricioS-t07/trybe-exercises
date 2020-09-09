@@ -96,8 +96,9 @@
 			// 8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 			let listaUl = document.createElement('ul');
 			divFilha3.appendChild(listaUl);
+			let itemLista = '';
 			for (let i = 1; i <= 10; i += 1) {
-				let itemLista = document.createElement('li');
+				itemLista = document.createElement('li');
 				itemLista.innerText = i;
 				document.querySelectorAll('ul')[0].appendChild(itemLista);
 			}
@@ -117,8 +118,12 @@
 			tagDivPai.removeChild(divFilha2);
 			// 4 p2 Centralize o div criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto do div;
 			divFilha3.style.marginRight = 'auto';
-			// Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+			// 5 p2 Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
 			divFilha.parentNode.style.backgroundColor = 'rgb( 0 , 128 , 0 )';
+
+			// 6 p2 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+			listaUl.lastChild.previousElementSibling.remove(itemLista);
+			listaUl.lastChild.remove(itemLista);
 		</script>
 	</body>
 </html>
