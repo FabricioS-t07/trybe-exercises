@@ -70,46 +70,52 @@
 			// 3 Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
 			const divFilha = document.createElement('div');
 			document.querySelectorAll('div')[0].appendChild(divFilha);
-			document.querySelectorAll('div')[1].className = 'center-content';
+			divFilha.className = 'center-content';
 
 			// 4 Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
-			const pFilhaDiv = document.createElement('div');
+			const pFilhaDiv = document.createElement('p');
 			document.querySelectorAll('div')[1].appendChild(pFilhaDiv);
-			document.getElementsByTagName('div')[2].innerText = 'um texto aqui';
+			pFilhaDiv.innerText = 'um texto aqui';
 
 			// 5 Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 			const divFilha2 = document.createElement('div');
 			document.querySelectorAll('div')[0].appendChild(divFilha2);
-			document.querySelectorAll('div')[3].className = 'left-content';
+			divFilha2.className = 'left-content';
 
 			// 6 Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
 			const divFilha3 = document.createElement('div');
 			document.querySelectorAll('div')[0].appendChild(divFilha3);
-			document.querySelectorAll('div')[4].className = 'right-content';
+			divFilha3.className = 'right-content';
 
 			// 7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
 			const imagem = document.createElement('img');
 			document.querySelectorAll('div')[0].appendChild(imagem);
-			document.querySelector('img').src = 'https://picsum.photos/200';
-			document.querySelector('img').className = 'small-image';
+			imagem.src = 'https://picsum.photos/200';
+			imagem.className = 'small-image';
 
 			// 8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 			let listaUl = document.createElement('ul');
-			document.querySelectorAll('div')[4].appendChild(listaUl);
+			divFilha3.appendChild(listaUl);
 			for (let i = 1; i <= 10; i += 1) {
 				let itemLista = document.createElement('li');
 				itemLista.innerText = i;
 				document.querySelectorAll('ul')[0].appendChild(itemLista);
 			}
-			// Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+			// 9 Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
 			for (let i = 0; i < 3; i += 1) {
 				let h3FilhaTagDivPai = document.createElement('h3');
-				document.body.childNodes[3].appendChild(h3FilhaTagDivPai);
+				tagDivPai.appendChild(h3FilhaTagDivPai);
 			}
-			// Adicione a classe title na tag h1 criada;
-			document.body.childNodes[2].className = 'title';
+			// 1p2 Adicione a classe title na tag h1 criada;
+			tagH1.className = 'title';
 
-			//
+			// 1 p2 Adicione a classe description nas 3 tags h3 criadas;
+			for (let i = 0; i < 3; i += 1) {
+				document.querySelectorAll('h3')[i].className = 'description';
+			}
+			// 2 p2 Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+			tagDivPai.removeChild(divFilha2);
+			// 3 p2
 		</script>
 	</body>
 </html>
