@@ -68,7 +68,20 @@
 				Além disso, sempre que um dos eventos for realizado deve-se logar no console
 				qual dos eventos acabou de ocorrer.
 			</p>
-			<!-- Adicione a tag <img /> aqui -->
+			<img src="quadradoAzul.png" alt="" id="idQuadradoAzul" />
 		</div>
+		<script>
+			let imagenUm = document.getElementById('idQuadradoAzul');
+			imagenUm.addEventListener('mouseover', trocaImg);
+			function trocaImg() {
+				imagenUm.src = 'quadradoVermelho.png';
+				imagenUm.addEventListener('mouseleave', voltaImg);
+				console.log('onMouseOver aconteceu');
+			}
+			function voltaImg() {
+				imagenUm.src = 'quadradoAzul.png';
+				console.log('Mouse Leave aconteceu');
+			}
+		</script>
 	</body>
 </html>
