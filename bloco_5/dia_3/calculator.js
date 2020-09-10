@@ -7,6 +7,7 @@ function squareNumber(num) {
 let divSolution = document.querySelector('#solution');
 let buttonSquare = document.getElementById('square-button');
 buttonSquare.addEventListener('click', squareFuncion);
+
 function squareFuncion() {
 	num = document.getElementById('square-input').value;
 	return squareNumber(num);
@@ -17,6 +18,7 @@ function halfOf(num) {
 	let half = num / 2;
 	divSolution.innerText = 'Half of ' + num + ' is ' + half;
 }
+
 let buttonHalf = document.getElementById('half-button');
 buttonHalf.addEventListener('click', halfOf);
 
@@ -26,6 +28,7 @@ function percentOf(num1, num2) {
 	let percent = (num1 / num2) * 100;
 	divSolution.innerText = num1 + ' is ' + percent + '% of ' + num2;
 }
+
 let buttonPercentOf = document.getElementById('percent-button');
 buttonPercentOf.addEventListener('click', percentOf);
 
@@ -35,6 +38,7 @@ function areaOfCircle(radius) {
 	divSolution.innerText =
 		'The area of circle with radius ' + radius + ' is ' + area;
 }
+
 let buttonCircleArea = document.getElementById('area-button');
 buttonCircleArea.addEventListener('click', areaOfCircle);
 
