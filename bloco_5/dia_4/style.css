@@ -1,6 +1,11 @@
 header {
-	height: 35px;
+	margin-top: 0;
+	margin-bottom: 5px;
 	text-align: center;
+	padding: 5px;
+	border-radius: 15px;
+	border: 1px solid black;
+	background: linear-gradient(to bottom, rgb(62, 188, 219), rgb(255, 255, 255));
 }
 
 button {
@@ -30,6 +35,8 @@ article {
 }
 
 .caixaDeEscolhas {
+	border-radius: 15px;
+	background: rgb(0, 0, 0);
 	position: fixed;
 	top: 75px;
 	text-align: center;

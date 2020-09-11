@@ -2,8 +2,8 @@ window.onload = function () {
 	janelaCarregadaFundoCor();
 	// janelaCarregadaTextoCor();
 };
+let botoesIndice = document.getElementsByTagName('button');
 function janelaCarregadaFundoCor() {
-	let botoesIndice = document.getElementsByTagName('button');
 	corDeFundo(localStorage.getItem('corDeFundoUsuario'));
 	for (index = 1; index < botoesIndice.length; index += 1) {
 		let botaoTrocaCor = botoesIndice[index];
@@ -41,16 +41,20 @@ function escolhaOnTrocaCor() {
 
 function quadradinhoInterno() {
 	let quantidadeDeQuadrados = 4;
-	let quadradinhosId = document.getElementById('quadradoP').childNodes;
 	for (let index = 0; index < quantidadeDeQuadrados; index += 1) {
 		let quadradinho = document.createElement('p');
 		document.getElementById('quadradoP').appendChild(quadradinho);
 		quadradinho.id = 'quadradinho' + `${index}`;
 	}
-	quadradinhosId[0].addEventListener('click', fundoAzul);
-	quadradinhosId[1].addEventListener('click', fundoVerde);
-	quadradinhosId[2].addEventListener('click', fundoVermelho);
-	quadradinhosId[3].addEventListener('click', fundoCinza);
+	botaofundoCor();
+}
+function botaofundoCor() {
+	let arrayCoresFundo = [fundoAzul, fundoVerde, fundoVermelho, fundoCinza];
+	console.log(arrayCoresFundo[0]);
+	let quadradinhosId = document.getElementById('quadradoP').childNodes;
+	for (let index = 0; index < quadradinhosId.length; index += 1) {
+		quadradinhosId[index].addEventListener('click', arrayCoresFundo[index]);
+	}
 }
 
 function corDeFundo(corDoFundo) {
